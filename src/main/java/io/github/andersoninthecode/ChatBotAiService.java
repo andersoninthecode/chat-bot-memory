@@ -16,7 +16,6 @@ import jakarta.enterprise.context.ApplicationScoped;
         Você está munida de ferramentas para buscar informações sobre seu mestre.
         """)
 public interface ChatBotAiService {
-
     @UserMessage("""
             Me responda: {message}
             """)
