@@ -3,6 +3,6 @@ package io.github.andersoninthecode;
 import io.quarkus.test.junit.QuarkusIntegrationTest;
 
 @QuarkusIntegrationTest
-class GreetingResourceIT extends GreetingResourceTest {
+class AgentConversationIT extends AgentConversationTest {
     // Execute the same tests but in packaged mode.
 }
