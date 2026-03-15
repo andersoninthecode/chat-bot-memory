@@ -1,20 +1,22 @@
 package io.github.andersoninthecode;
 
 import io.quarkus.test.junit.QuarkusTest;
+import io.restassured.http.ContentType;
+
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.CoreMatchers.is;
 
 @QuarkusTest
 class AgentConversationTest {
     @Test
     void testHelloEndpoint() {
         given()
-          .when().get("/hello")
-          .then()
-             .statusCode(200)
-             .body(is("Hello from Quarkus REST"));
+                .contentType(ContentType.TEXT)
+                .body("Olá")
+                .when().post("/chat")
+                .then()
+                .statusCode(500);
     }
 
 }
